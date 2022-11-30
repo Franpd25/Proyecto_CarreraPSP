@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.franprados.ProyectoCarrera.PrimaryController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../Imagenes/5471507.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="201.0" fitWidth="600.0" layoutY="100.0">
+         <image>
+            <Image url="@../Imagenes/pista-de-carreras-con-marcación.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="car1" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="121.0">
+         <image>
+            <Image url="@../Imagenes/cocheazul.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="car2" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="161.0">
+         <image>
+            <Image url="@../Imagenes/cocheazul.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="car3" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="207.0">
+         <image>
+            <Image url="@../Imagenes/cocheazul.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="car4" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="249.0">
+         <image>
+            <Image url="@../Imagenes/cocheazul.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="start" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStart" text="INICIAR" />
+      <Button fx:id="stop" layoutX="104.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStop" text="DETENER" />
+      <Button fx:id="restart" layoutX="195.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonRestart" text="REINICIAR" />
+      <Label layoutX="120.0" layoutY="14.0" text="PROYECTO CARRERA" textAlignment="CENTER" textFill="#bf2525">
+         <font>
+            <Font name="Caladea Bold" size="37.0" />
+         </font>
+      </Label>
+      <Pane fx:id="finish" layoutX="574.0" layoutY="100.0" prefHeight="200.0" prefWidth="28.0" />
+   </children>
+</AnchorPane>
