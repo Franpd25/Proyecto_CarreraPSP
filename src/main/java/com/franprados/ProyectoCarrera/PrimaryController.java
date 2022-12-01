@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import com.franprados.ProyectoCarrera.model.Carrera;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -94,8 +95,9 @@ public class PrimaryController implements Initializable {
 		j4.start();
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@FXML
-	private void buttonStop() {
+	private void buttonStop(ActionEvent event) {
 		start.setText("DETENIDO");
 		stop.setText("REANUDAR");
 		j1.stopHilo();
@@ -103,6 +105,27 @@ public class PrimaryController implements Initializable {
 		j3.stopHilo();
 		j4.stopHilo();
 		
+		stop.setOnAction(e ->{
+			j1.restartHilo();
+			j2.restartHilo();
+			j3.restartHilo();
+			j4.restartHilo();
+			start.setText("CONTANDO");
+			start.setDisable(true);
+			stop.setDisable(false);
+			restart.setDisable(false);
+			stop.setText("DETENER");
+			
+			j1 = new Carrera(car1, this);
+			j2 = new Carrera(car2, this);
+			j3 = new Carrera(car3, this);
+			j4 = new Carrera(car4, this);
+
+			j1.start();
+			j2.start();
+			j3.start();
+			j4.start();
+		});
 	}
 
 	@FXML

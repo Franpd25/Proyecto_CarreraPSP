@@ -13,7 +13,7 @@ public class Carrera extends Thread {
 	
 	protected ImageView image;
 	protected PrimaryController cars;
-	protected volatile boolean continuar = true;
+	protected boolean continuar = true;
 
 	public Carrera() {}
 	
@@ -61,11 +61,15 @@ public class Carrera extends Thread {
 		}
 	}
 	
-	public void stopHilo() {
-		continuar = false;
+	public boolean stopHilo() {
+		return continuar = false;
 	}
 	
-	public void restartHilo() {
-		continuar = false;
+	public boolean restartHilo() {
+		return continuar = false;
+	}
+	
+	public boolean resumeHilo() {
+		return continuar = true;
 	}
 }
