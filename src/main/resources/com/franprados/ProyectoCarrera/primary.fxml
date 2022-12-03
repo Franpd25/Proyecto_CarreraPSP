@@ -20,24 +20,24 @@
             <Image url="@../Imagenes/pista-de-carreras-con-marcación.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="car1" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="120.0">
+      <ImageView fx:id="car1" fitHeight="25.0" fitWidth="58.0" layoutX="6.0" layoutY="125.0">
          <image>
-            <Image url="@../Imagenes/cocheazul.jpg" />
+            <Image url="@../Imagenes/cocheazul.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="car2" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="161.0">
+      <ImageView fx:id="car2" fitHeight="58.0" fitWidth="71.0" layoutX="6.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/cocheazul.jpg" />
+            <Image url="@../Imagenes/cocheamarillo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="car3" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="207.0">
+      <ImageView fx:id="car3" fitHeight="58.0" fitWidth="66.0" layoutX="8.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/cocheazul.jpg" />
+            <Image url="@../Imagenes/coche-de-carreras.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="car4" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="249.0">
+      <ImageView fx:id="car4" fitHeight="58.0" fitWidth="66.0" layoutX="8.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/cocheazul.jpg" />
+            <Image url="@../Imagenes/coche-de-competicion.png" />
          </image>
       </ImageView>
       <Button fx:id="start" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStart" text="INICIAR" />
