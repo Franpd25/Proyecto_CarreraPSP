@@ -66,14 +66,17 @@ public class Players extends Thread {
 		}
 	}
 	
+	//DETENER
 	public boolean stopHilo() {
 		return continuar = false;
 	}
 	
+	//REANUDAR
 	public boolean restartHilo() {
 		return continuar = false;
 	}
 	
+	//REINICIAR
 	public boolean resumeHilo() {
 		return continuar = true;
 	}
