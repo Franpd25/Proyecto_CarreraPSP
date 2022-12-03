@@ -47,8 +47,8 @@ public class Carrera extends Thread {
 				car3 = (int) cars.getCar3().getLayoutX();
 				car4 = (int) cars.getCar4().getLayoutX();
 					
-				if (car1 < cars.getFinish().getLayoutX() - 90 && car2 < cars.getFinish().getLayoutX() - 90
-						&& car3 < cars.getFinish().getLayoutX() - 90 && car4 < cars.getFinish().getLayoutX() - 90) {
+				if (car1 < cars.getFinish().getLayoutX() - 88 && car2 < cars.getFinish().getLayoutX() - 88
+						&& car3 < cars.getFinish().getLayoutX() - 88 && car4 < cars.getFinish().getLayoutX() - 88) {
 					image.setLayoutX(image.getLayoutX() + 10);
 				}else {
 					break;

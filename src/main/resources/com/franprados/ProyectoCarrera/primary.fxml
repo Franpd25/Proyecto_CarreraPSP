@@ -15,12 +15,12 @@
             <Image url="@../Imagenes/5471507.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="201.0" fitWidth="600.0" layoutY="100.0">
+      <ImageView fitHeight="201.0" fitWidth="600.0" layoutY="107.0">
          <image>
             <Image url="@../Imagenes/pista-de-carreras-con-marcación.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="car1" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="121.0">
+      <ImageView fx:id="car1" fitHeight="33.0" fitWidth="57.0" layoutX="8.0" layoutY="120.0">
          <image>
             <Image url="@../Imagenes/cocheazul.jpg" />
          </image>

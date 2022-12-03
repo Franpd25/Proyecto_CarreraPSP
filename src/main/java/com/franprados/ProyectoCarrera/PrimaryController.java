@@ -5,7 +5,6 @@ import java.util.ResourceBundle;
 
 import com.franprados.ProyectoCarrera.model.Carrera;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,6 +12,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class PrimaryController implements Initializable {
+
+	Carrera j1;
+	Carrera j2;
+	Carrera j3;
+	Carrera j4;
+
 	@FXML
 	private ImageView car1;
 	@FXML
@@ -23,11 +28,6 @@ public class PrimaryController implements Initializable {
 	private ImageView car4;
 	@FXML
 	private Pane finish;
-
-	Carrera j1;
-	Carrera j2;
-	Carrera j3;
-	Carrera j4;
 
 	@FXML
 	private Button start;
@@ -70,19 +70,10 @@ public class PrimaryController implements Initializable {
 
 	@FXML
 	private void buttonStart() {
-		start.setText("CONTANDO");
-		start.setDisable(true);
-		stop.setDisable(false);
-		restart.setDisable(false);
-
 		car1.setLayoutX(0);
-		car1.setLayoutY(car1.getLayoutY());
 		car2.setLayoutX(0);
-		car2.setLayoutY(car2.getLayoutY());
 		car3.setLayoutX(0);
-		car3.setLayoutY(car3.getLayoutY());
 		car4.setLayoutX(0);
-		car4.setLayoutY(car4.getLayoutY());
 
 		j1 = new Carrera(car1, this);
 		j2 = new Carrera(car2, this);
@@ -93,39 +84,50 @@ public class PrimaryController implements Initializable {
 		j2.start();
 		j3.start();
 		j4.start();
+
+		start.setText("CONTANDO");
+		start.setDisable(true);
+		stop.setDisable(false);
+		restart.setDisable(false);
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
 	@FXML
-	private void buttonStop(ActionEvent event) {
-		start.setText("DETENIDO");
-		stop.setText("REANUDAR");
-		j1.stopHilo();
-		j2.stopHilo();
-		j3.stopHilo();
-		j4.stopHilo();
+	private void buttonStop() {
 		
-		stop.setOnAction(e ->{
-			j1.restartHilo();
-			j2.restartHilo();
-			j3.restartHilo();
-			j4.restartHilo();
-			start.setText("CONTANDO");
-			start.setDisable(true);
-			stop.setDisable(false);
-			restart.setDisable(false);
-			stop.setText("DETENER");
-			
-			j1 = new Carrera(car1, this);
-			j2 = new Carrera(car2, this);
-			j3 = new Carrera(car3, this);
-			j4 = new Carrera(car4, this);
+		if (stop.getText().equals("DETENER")) {
+			j1.stopHilo();
+			j2.stopHilo();
+			j3.stopHilo();
+			j4.stopHilo();
 
-			j1.start();
-			j2.start();
-			j3.start();
-			j4.start();
-		});
+			start.setText("DETENIDO");
+			stop.setText("REANUDAR");
+
+		} else {
+
+			if (stop.getText().equals("REANUDAR")) {
+				j1.restartHilo();
+				j2.restartHilo();
+				j3.restartHilo();
+				j4.restartHilo();
+
+				j1 = new Carrera(car1, this);
+				j2 = new Carrera(car2, this);
+				j3 = new Carrera(car3, this);
+				j4 = new Carrera(car4, this);
+
+				j1.start();
+				j2.start();
+				j3.start();
+				j4.start();
+
+				start.setText("CONTANDO");
+				stop.setText("DETENER");
+				start.setDisable(true);
+				stop.setDisable(false);
+				restart.setDisable(false);
+			}
+		}
 	}
 
 	@FXML
