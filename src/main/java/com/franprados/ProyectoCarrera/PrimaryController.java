@@ -3,7 +3,7 @@ package com.franprados.ProyectoCarrera;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.franprados.ProyectoCarrera.model.Carrera;
+import com.franprados.ProyectoCarrera.model.Players;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,10 +13,10 @@ import javafx.scene.layout.Pane;
 
 public class PrimaryController implements Initializable {
 
-	Carrera j1;
-	Carrera j2;
-	Carrera j3;
-	Carrera j4;
+	Players j1;
+	Players j2;
+	Players j3;
+	Players j4;
 
 	@FXML
 	private ImageView car1;
@@ -75,10 +75,10 @@ public class PrimaryController implements Initializable {
 		car3.setLayoutX(0);
 		car4.setLayoutX(0);
 
-		j1 = new Carrera(car1, this);
-		j2 = new Carrera(car2, this);
-		j3 = new Carrera(car3, this);
-		j4 = new Carrera(car4, this);
+		j1 = new Players(car1, this);
+		j2 = new Players(car2, this);
+		j3 = new Players(car3, this);
+		j4 = new Players(car4, this);
 
 		j1.start();
 		j2.start();
@@ -111,10 +111,10 @@ public class PrimaryController implements Initializable {
 				j3.restartHilo();
 				j4.restartHilo();
 
-				j1 = new Carrera(car1, this);
-				j2 = new Carrera(car2, this);
-				j3 = new Carrera(car3, this);
-				j4 = new Carrera(car4, this);
+				j1 = new Players(car1, this);
+				j2 = new Players(car2, this);
+				j3 = new Players(car3, this);
+				j4 = new Players(car4, this);
 
 				j1.start();
 				j2.start();

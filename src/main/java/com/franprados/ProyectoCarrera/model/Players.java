@@ -1,33 +1,38 @@
 package com.franprados.ProyectoCarrera.model;
 
 import com.franprados.ProyectoCarrera.PrimaryController;
-import com.franprados.ProyectoCarrera.utils.Dialog;
 
 import javafx.scene.image.ImageView;
 
-public class Carrera extends Thread {
+public class Players extends Thread {
 
 	protected int id;
 	protected String name;
-	protected int nLaps;
+	protected int age;
+	protected int dorsal;
+	protected String nationality;
 	
 	protected ImageView image;
 	protected PrimaryController cars;
+	
 	protected boolean continuar = true;
 
-	public Carrera() {}
+	public Players() {}
 	
-	public Carrera(ImageView image, PrimaryController cars) {
+	public Players(ImageView image, PrimaryController cars) {
 		this.image = image;
 		this.cars = cars;
 	}
-	
-	public Carrera(int id, String name, int nLaps, ImageView image, PrimaryController cars) {
+
+	public Players(int id, String name, int age, int dorsal, String nationality, ImageView image, PrimaryController cars, boolean continuar) {
 		this.id = id;
 		this.name = name;
-		this.nLaps = nLaps;
+		this.age = age;
+		this.dorsal = dorsal;
+		this.nationality = nationality;
 		this.image = image;
 		this.cars = cars;
+		this.continuar = continuar;
 	}
 
 	@Override
