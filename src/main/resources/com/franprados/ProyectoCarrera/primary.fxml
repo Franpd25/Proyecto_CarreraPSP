@@ -40,9 +40,9 @@
             <Image url="@../Imagenes/coche-de-competicion.png" />
          </image>
       </ImageView>
-      <Button fx:id="start" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStart" text="INICIAR" />
-      <Button fx:id="stop" layoutX="104.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStop" text="DETENER" />
-      <Button fx:id="restart" layoutX="195.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonRestart" text="REINICIAR" />
+      <Button fx:id="start" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStart" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: black;" text="INICIAR" textFill="WHITE" />
+      <Button fx:id="stop" layoutX="104.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStop" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: black;" text="DETENER" textFill="WHITE" />
+      <Button fx:id="restart" layoutX="195.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonRestart" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: black;" text="REINICIAR" textFill="WHITE" />
       <Label layoutX="120.0" layoutY="14.0" text="PROYECTO CARRERA" textAlignment="CENTER" textFill="#bf2525">
          <font>
             <Font name="Caladea Bold" size="37.0" />

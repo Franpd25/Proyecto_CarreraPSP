@@ -1,5 +1,7 @@
 package com.franprados.ProyectoCarrera.model;
 
+import javax.swing.JOptionPane;
+
 import com.franprados.ProyectoCarrera.PrimaryController;
 
 import javafx.scene.image.ImageView;
@@ -36,6 +38,12 @@ public class Players extends Thread {
 	}
 
 	@Override
+	public String toString() {
+		return "Players [id=" + id + ", name=" + name + ", age=" + age + ", dorsal=" + dorsal + ", nationality="
+				+ nationality + ", image=" + image + ", cars=" + cars + "]";
+	}
+
+	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		int car1 = 0;
@@ -52,17 +60,29 @@ public class Players extends Thread {
 				car3 = (int) cars.getCar3().getLayoutX();
 				car4 = (int) cars.getCar4().getLayoutX();
 					
-				if (car1 < cars.getFinish().getLayoutX() - 88 && car2 < cars.getFinish().getLayoutX() - 88
+				if (car1 < cars.getFinish().getLayoutX() - 80 && car2 < cars.getFinish().getLayoutX() - 80
 						&& car3 < cars.getFinish().getLayoutX() - 88 && car4 < cars.getFinish().getLayoutX() - 88) {
 					image.setLayoutX(image.getLayoutX() + 10);
 				}else {
 					break;
+				}
+				
+				if (image.getLayoutX() >= cars.getFinish().getLayoutX() - 80) {
+					if (car1 > car2) {
+						//JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Fernando Alonso");
+						JOptionPane.showMessageDialog(null, "El ganador ha sido Fernando Alonso");
+
+					} else if (car2 > car1) {
+						//JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
+						JOptionPane.showMessageDialog(null, "El ganador ha sido Carlos Sainz");
+					}
 				}
 
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
 			}
+			
 		}
 	}
 	
@@ -74,10 +94,5 @@ public class Players extends Thread {
 	//REANUDAR
 	public boolean restartHilo() {
 		return continuar = false;
-	}
-	
-	//REINICIAR
-	public boolean resumeHilo() {
-		return continuar = true;
 	}
 }

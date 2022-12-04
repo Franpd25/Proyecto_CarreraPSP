@@ -70,7 +70,7 @@ public class PrimaryController implements Initializable {
 
 	@FXML
 	private void buttonStart() {
-		
+
 		car1.setLayoutX(0);
 		car2.setLayoutX(0);
 		car3.setLayoutX(0);
@@ -94,7 +94,7 @@ public class PrimaryController implements Initializable {
 
 	@FXML
 	private void buttonStop() {
-		
+
 		if (stop.getText().equals("DETENER")) {
 			j1.stopHilo();
 			j2.stopHilo();
@@ -135,10 +135,16 @@ public class PrimaryController implements Initializable {
 	private void buttonRestart() {
 		
 		if (restart.getText().equals("REINICIAR")) {
-			this.buttonStart();
+			start.setText("INICIAR");
+			stop.setText("DETENER");
+			start.setDisable(false);
+			stop.setDisable(true);
+			restart.setDisable(true);
 			
-		} else {
-			this.buttonStop();
+			car1.setLayoutX(0);
+			car2.setLayoutX(0);
+			car3.setLayoutX(0);
+			car4.setLayoutX(0);
 		}
 	}
 }
