@@ -68,14 +68,17 @@ public class PrimaryController implements Initializable {
 		restart.setDisable(true);
 	}
 
+	/**
+	 * En este método nos encargamos de inicializar las variables
+	 * de los 4 hilos y ejecutar a la misma vez la creación
+	 * de los propios hilos citados anteriormente.
+	 * También, indicamos que cuando se ejecuta el hilo,
+	 * el botón iniciar cambia su texto a CONTANDO y los demás
+	 * botones se deshabilitan.
+	 */
 	@FXML
 	private void buttonStart() {
-
-		car1.setLayoutX(0);
-		car2.setLayoutX(0);
-		car3.setLayoutX(0);
-		car4.setLayoutX(0);
-
+		
 		j1 = new Players(car1, this);
 		j2 = new Players(car2, this);
 		j3 = new Players(car3, this);
@@ -89,9 +92,16 @@ public class PrimaryController implements Initializable {
 		start.setText("CONTANDO");
 		start.setDisable(true);
 		stop.setDisable(false);
-		restart.setDisable(false);
+		restart.setDisable(true);
 	}
 
+	/**
+	 * En este método nos encargamos de detener y reanudar el hilo con el mismo botón.
+	 * Para ello, cuando detenemos el hilo, los botones cambian su
+	 * texto y se deshabilitan y cuando lo reanudamos continúa 
+	 * el hilo por su ejecución y los botones cambian al igual que
+	 * el botón de detener.
+	 */
 	@FXML
 	private void buttonStop() {
 
@@ -103,6 +113,7 @@ public class PrimaryController implements Initializable {
 
 			start.setText("DETENIDO");
 			stop.setText("REANUDAR");
+			restart.setDisable(false);
 
 		} else {
 
@@ -126,11 +137,18 @@ public class PrimaryController implements Initializable {
 				stop.setText("DETENER");
 				start.setDisable(true);
 				stop.setDisable(false);
-				restart.setDisable(false);
+				restart.setDisable(true);
 			}
 		}
 	}
 
+	/**
+	 * En este método nos encargamos de reiniciar el hilo principal,
+	 * para ello, seteamos los valores a 0, una vez que el hilo
+	 * principal haya alcanzado el objetivo final.
+	 * Cambiamos el texto de dichos botones y deshabilitamos los
+	 * botones de detener y reiniciar.
+	 */
 	@FXML
 	private void buttonRestart() {
 		
