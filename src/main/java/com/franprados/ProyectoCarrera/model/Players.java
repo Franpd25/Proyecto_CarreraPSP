@@ -80,43 +80,37 @@ public class Players extends Thread {
 						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Fernando Alonso");
 						
 					} else if (car1 > car4) {
-						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Fernando Alonso");
-							
-					} else {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Fernando Alonso");	
+					} 
 						
-						if (car2 > car1) {
-							JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
-							
-						} else if (car2 > car3) {
-							JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
-							
-						} else if (car2 > car4) {
-							JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
-							
-						} else {
-							
-							if (car3 > car1) {
-								JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Max Verstappen");
-								
-							} else if (car3 > car2) {
-								JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Max Verstappen");
-								
-							} else if (car3 > car4) {
-								JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Max Verstappen");
-								
-							} else {
-								
-								if (car4 > car1) {
-									JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Lewis Hamilton");
-									
-								} else if (car4 > car2) {
-									JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Lewis Hamilton");
-									
-								} else if (car4 > car3) {
-									JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Lewis Hamilton");
-								}
-							}
-						}
+					if (car2 > car1) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
+						
+					} else if (car2 > car3) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
+						
+					} else if (car2 > car4) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Carlos Sainz");
+					} 
+					
+					if (car3 > car1) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Max Verstappen");
+						
+					} else if (car3 > car2) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Max Verstappen");
+						
+					} else if (car3 > car4) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Max Verstappen");
+					}
+											
+					if (car4 > car1) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Lewis Hamilton");
+						
+					} else if (car4 > car2) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Lewis Hamilton");
+						
+					} else if (car4 > car3) {
+						JOptionPane.showInputDialog(null, "ENHORABUENA!!", "El ganador ha sido Lewis Hamilton");
 					}
 				}
 			} catch (Exception e) {

@@ -137,7 +137,7 @@ public class PrimaryController implements Initializable {
 				stop.setText("DETENER");
 				start.setDisable(true);
 				stop.setDisable(false);
-				restart.setDisable(true);
+				restart.setDisable(false);
 			}
 		}
 	}
